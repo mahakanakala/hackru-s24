@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <main class="llmMain">
+        <!-- <div class="chat-wrapper"> -->
+        <div class="chatHeader">
+            <h2 class="llmTitle">StylistAI</h2>
+            <p class="chatDes">Get in on the trend with our curated selection of best-selling styles for you.</p>
+        </div>
+        <div class="chat-container">
+            <div id="chat-messages">
+            </div>
+            
+            <div class="input-container">
+                <input class="input-container-text" type="text" id="user-input" name="user-input"
+                    placeholder="Message StylistAI...">
+                <button id="send-btn" title="send"> Send
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="chat-intro-wrapper">
+            <div class="chat-intro-container">
+                <div class="chat-icon"></div>
+                <div>
+                    <div class="suggestedPrompt1">Prompt 1</div>
+                    <div class="suggestedPrompt1">Prompt 2</div>
+                    <div class="suggestedPrompt1">Prompt 3</div>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+    <script>
+        // Convert HTML content to Markdown using marked.js
+        const botMessages = document.querySelectorAll('.botMessage');
+        botMessages.forEach(message => {
+            const paragraphs = message.querySelectorAll('p'); // Select all <p> elements inside .botMessage
+            paragraphs.forEach(paragraph => {
+                // Replace the <p> element with its inner HTML content
+                paragraph.outerHTML = paragraph.innerHTML;
+            });
+        });
+    </script>
+    <!-- <script>
+        var speed = 50; /* The speed/duration of the effect in milliseconds */
+    
+        function typeWriter() {
+            var botMessageElement = document.querySelector(".botMessage p");
+                var txt = botMessageElement.textContent;
+                var i = 0;
+                function type() {
+                    if (i < txt.length) {
+                        botMessageElement.textContent += txt.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                }
+                type();
+        }
+    
+        // Call the typeWriter function when the send button is clicked
+        document.getElementById("send-btn").addEventListener("click", function () {
+            typeWriter();
+        });
+    </script> -->
+    
+</body>
+
+</html>

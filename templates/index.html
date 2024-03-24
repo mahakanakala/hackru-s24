@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionFinder</title>
+</head>
+
+<main class="main">
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="../static/image_1.jpeg" alt="Image 1">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_3.jpeg" alt="Image 3">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_2.jpeg" alt="Image 2">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_7.jpeg" alt="Image 7">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_8.jpeg" alt="Image 8">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_4.jpeg" alt="Image 4">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_6.jpeg" alt="Image 6">
+        </div>
+        <div class="grid-item">
+            <img src="../static/image_5.jpeg" alt="Image 5">
+        </div>
+    </div>
+    <h1 class="title">FashionFinder</h1>
+    <div class="header">
+        <div class="llmBtnContainer">
+            <a href="{{ url_for('llm') }}" target="_self" rel="noopener noreferrer" class="loginBtn">StylelistAI</a>
+        </div>
+        <div class="forYouBtnContainer">
+            <a href="{{url_for('forYou')}}" target="_self" rel="noopener noreferrer" class="llmBtn">For You</a>
+        </div>
+        <div class="homeBtnContainer">
+            <a href="{{ url_for('home') }}" target="_self" rel="noopener noreferrer" class="homeBtn">Home</a>
+        </div>
+    </div>
+</main>
+
+</html>

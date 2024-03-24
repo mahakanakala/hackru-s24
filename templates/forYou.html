@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+  <header>
+  </header>
+
+  <main class="forYouMain">
+    <div class="backBtnContainer">
+      <a href="{{ url_for('home') }}" class="backBtn">Back</a>
+    </div>
+    <div class="forYourHeader">
+      <h2 class="forYouTitle">For You</h2>
+      <p class="forYouDes">Get in on the trend with our curated selection of best-selling styles for you.</p>
+    </div>
+    
+    <div class="spinnerContainer">
+      <div class="arrowsAndBox">
+        <div class="dataVisual">
+          <img id="spinnerImage" src="{{ url_for('static', filename='image_1.jpeg') }}" alt="Spinner" class="spinnerImage" />
+        </div>
+      </div>
+      <div class="spinnerContent">
+        <div class="spinnerCircles">
+          <div class="circle activeCircle" onclick="handleSpinnerClick(0)"></div>
+          <div class="circle" onclick="handleSpinnerClick(1)"></div>
+          <div class="circle" onclick="handleSpinnerClick(2)"></div>
+        </div>
+        <div class="spinnerText">
+          <h4 class="spinnerTitle">62 Products with Low Hazard Toxins</h4>
+          <h3 class="hazardName">Low Hazard</h3>
+          <p class="spinnerDescription">Ingredients that may cause allergies, minor environmental harm, or irritation.</p>
+        </div>
+        <div class="circleContainer">
+          <div class="yellowCircle" onclick="handleSpinnerClick(0)"></div>
+          <div class="orangeCircle" onclick="handleSpinnerClick(1)"></div>
+          <div class="redCircle" onclick="handleSpinnerClick(2)"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
