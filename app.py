@@ -37,7 +37,7 @@ def get_response():
     result = response.json()
     
     response_value = result['result']['response']
-    print(result)
+    # print(result)
     return jsonify({'response_value': response_value})
 
 if __name__ == '__main__':
