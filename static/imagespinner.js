@@ -2,19 +2,19 @@
 const spinners = [
     {
       image: '../static/image_1.jpeg',
-      title: '62 Products with Low Hazard Toxins',
+      title: 'Style Find!',
       hazardName: 'Low Hazard',
       description: 'Ingredients that may cause allergies, minor environmental harm, or irritation.',
     },
     {
       image: '../static/image_3.jpeg',
-      title: '670 Products with Moderate Hazard Toxins',
+      title: 'Style Find!',
       hazardName: 'Moderate Hazard',
       description: 'Ingredients that act as endocrine disruptors or mimic estrogen, potentially affecting hormonal balance.',
     },
     {
       image: '../static/image_6.jpeg',
-      title: '29 Products with High Hazard Toxins',
+      title: 'Style Find!',
       hazardName: 'High Hazard',
       description: 'Ingredients with potential carcinogenic, mutagenic, or severe environmental impact.',
     },

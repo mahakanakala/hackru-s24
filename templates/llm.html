@@ -14,9 +14,17 @@
 <body>
     <main class="llmMain">
         <!-- <div class="chat-wrapper"> -->
-        <div class="chatHeader">
-            <h2 class="llmTitle">StylistAI</h2>
-            <p class="chatDes">Get in on the trend with our curated selection of best-selling styles for you.</p>
+            <div class="chatHeader">
+                <div class="logo">
+                    <img src="../static/Subject.png" alt="logo"/>
+                </div>
+                <div class="titleDescription">
+                    <h2 class="llmTitle">StylistAI</h2>
+                    <p class="chatDes">Get in on the trend with our curated selection of best-selling styles for you.</p>
+                </div>
+            </div>
+        <div class="chat-intro-wrapper">
+            
         </div>
         <div class="chat-container">
             <div id="chat-messages">
@@ -30,17 +38,25 @@
                 </button>
             </div>
         </div>
-        <!-- </div> -->
-        <!-- <div class="chat-intro-wrapper">
-            <div class="chat-intro-container">
-                <div class="chat-icon"></div>
-                <div>
-                    <div class="suggestedPrompt1">Prompt 1</div>
-                    <div class="suggestedPrompt1">Prompt 2</div>
-                    <div class="suggestedPrompt1">Prompt 3</div>
+        <div class="chat-intro-container">
+            <div class="chat-icon"></div>
+            <div>
+                <div class="suggestedPrompt1">
+                    <p><b>Create my color palette:<br></b>
+                         using a color that you love❤️
+                    </p></div>
+                <div class="suggestedPrompt2">
+                        <p><b>Take a style quiz:<br></b>
+                        to find your personal style </p>
+                </div>
+                <div class="suggestedPrompt3">
+                    <md-block rendered="content">
+                        <p> <b>Learn about fashion history:<br></b> 
+                        to explore old styles</p>
+                    </md-block>
                 </div>
             </div>
-        </div> -->
+        </div>
     </main>
 
     <script src="{{ url_for('static', filename='app.js') }}"></script>

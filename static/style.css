@@ -25,11 +25,11 @@ body {
 .llmMain {
     height: 100vh;
     background-color: #743200;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 .chat-container {
-    padding-top: 3em;
+    padding-top: 7em;
     max-width: 50em;
     position: relative;
     max-width: -moz-fit-content;
@@ -39,7 +39,7 @@ body {
 }
 
 #chat-messages {
-    height: 28em;
+    height: 15em;
     width: 75em;
     overflow-y: auto;
     padding: 10px;
@@ -49,26 +49,28 @@ body {
 }
 
 
-.userMessage, .botMessage {
+.userMessage,
+.botMessage {
     font-family: "Inter", sans-serif;
     color: #ccc;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
-.userMessage, .userName{
+.userMessage,
+.userName {
     text-align: right;
 }
 
-.userName{
+.userName {
     font-family: "Inter", sans-serif;
     color: #ccc;
     font-size: .8em;
     padding-bottom: .8em;
 }
 
-.botMessage{
+.botMessage {
     background-color: #92592d84;
-    
+
 }
 
 .input-container {
@@ -78,6 +80,7 @@ body {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.5em;
 }
 
 .input-container input {
@@ -86,50 +89,79 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: Romie;
-    width:86.8em;
-    
+    width: 46.8em;
+    font-size: 1em;
+
+}
+
+.input-container input::placeholder {
+    color: #DCCEB3
 }
 
 #user-input {
     flex: 1;
     padding: 5px;
     border: 1px solid white;
-    border-radius: .7em;
+    border-radius: .4em;
     color: white;
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
 
-  background-color : #743200; 
+    background-color: #743200;
 
 }
 
 #send-btn {
     padding: 5px 10px;
     border: none;
-    border-radius: 3px;
+    border-radius: .4em;
     background-color: #92592d84;
-    color: #fff;
     cursor: pointer;
     font-family: Romie;
+    font-size: 1.1em;
 }
 
-.chat-intro-container{
-    display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 500px;
-            background-color: green;
+.chat-intro-container {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: green; */
+    margin: 0 auto;
+    /* margin-right: auto; */
+
 }
 
-.suggestedPrompt1{
-    display: block;
-    width: 6em;
-    height: 6em;
+.suggestedPrompt1,
+.suggestedPrompt2,
+.suggestedPrompt3 {
+    display: inline-block;
+    /* Display the prompts horizontally */
+    width: 17em;
+    border: 1px solid #DCCEB3;
+    background-color: #92592d84;
+    color: #DCCEB3;
+    padding-top: .2em;
+    /* padding-bottom: .2em; */
+    padding: right 0.7em;
+    padding-left: 0.7em;
+    text-align: left;
+    margin-right: 10em;
+    border-radius: .8em;
+    line-height: 1.4;
 }
 
-.chat-icon{
+.suggestedPrompt1 {
+    margin-left: 5.5em;
+}
 
+
+.filter {
+    background-color: rgba(245, 245, 245, .2);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
 }
 
 .main {
@@ -140,7 +172,7 @@ input[type="text"], textarea {
     background-size: contain !important;
 }
 
-.gridContainer {
+.grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
     position: absolute;
@@ -148,14 +180,14 @@ input[type="text"], textarea {
     height: 80%;
 }
 
-.gridItem {
+.grid-item {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.gridItem img {
+.grid-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -165,6 +197,8 @@ input[type="text"], textarea {
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header a {
@@ -176,7 +210,6 @@ input[type="text"], textarea {
     font-size: 18px;
     line-height: 25px;
     border-radius: 4px;
-
 }
 
 @media screen and (max-width: 500px) {
@@ -187,29 +220,24 @@ input[type="text"], textarea {
     }
 }
 
-/* .headerRight {
-    float: right;
-} */
-
 .title {
     font-size: 3em;
     font-family: Main;
     color: white;
     margin: auto;
-    width: 50%;
+    /* width: 50%; */
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
-/* .loginBtnContainer {
-    float: right;
-} */
-
-.homeBtn {
-    background-color: none;
+.homeBtn,
+.llmBtn {
+    background-color: transparent;
+    color: #DCCEB3 !important;
 }
 
-.loginBtn {
+.llmBtn {
     font-family: Inter;
     background-color: none;
     border: .1em solid;
@@ -218,7 +246,6 @@ input[type="text"], textarea {
     color: #fff;
     border-radius: 5px;
 }
-
 
 .forYouMain {
     background-color: #743200;
@@ -257,28 +284,37 @@ input[type="text"], textarea {
     float: right;
 } */
 
-.chatMain {
-    padding-top: 12em;
+.titleDescription {
+    max-width: 70%;
+    /* Adjust as needed */
 }
 
 .chatHeader {
     position: relative;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo img {
+    max-width: 150px;
+    padding-left: 10em;
 }
 
 .llmTitle {
     font-family: Main;
-    font-size: 3em;
+    font-size: 4em;
     color: #DCCEB3;
     position: relative;
     margin: 0 auto;
     padding-top: 1.5em;
-    max-width: -moz-fit-content;
+    /* max-width: -moz-fit-content;
     max-width: fit-content;
     margin-left: auto;
-    margin-right: auto;
-
+    margin-right: auto; */
 }
 
 .chatDes {
@@ -287,7 +323,7 @@ input[type="text"], textarea {
     color: #DCCEB3;
 }
 
-button{
+button {
     color: white;
 }
 
@@ -296,17 +332,17 @@ button{
     font-style: italic;
     font-size: 1.2em;
     text-align: center;
-  }
-  
-  .hazardName {
+}
+
+.hazardName {
     font-family: Redaction 70;
     font-size: 3em;
     text-align: center;
     margin: 0 auto;
     position: relative;
-  }
-  
-  .spinnerContainer {
+}
+
+.spinnerContainer {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -314,8 +350,9 @@ button{
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-  .dataVisual {
+}
+
+.dataVisual {
     width: 50%;
     margin: 0 auto;
     padding-bottom: 1em;
@@ -324,44 +361,44 @@ button{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  }
-  
-  .spinnerImage {
+}
+
+.spinnerImage {
     width: 100%;
     object-fit: contain;
     object-position: center;
     position: relative;
-  }
-  
-  .spinnerDescription {
+}
+
+.spinnerDescription {
     font-family: "Inter", sans-serif;
     font-size: 1em;
     text-align: center;
     padding: 0.5em;
-  }
-  
-  .arrowsAndBox {
+}
+
+.arrowsAndBox {
     width: 100%;
     display: flex;
     align-items: center;
-  }
-  
-  .backArrow,
-  .forwardArrow {
+}
+
+.backArrow,
+.forwardArrow {
     font-size: 5em;
     margin: 0 0em;
-  }
+}
 
-  .circleContainer {
+.circleContainer {
     padding: 0.5em;
     margin: 0 auto;
     position: relative;
     text-align: center;
-  }
-  
-  .yellowCircle,
-  .orangeCircle,
-  .redCircle {
+}
+
+.yellowCircle,
+.orangeCircle,
+.redCircle {
     height: 3em;
     width: 3em;
     border-radius: 50%;
@@ -370,11 +407,11 @@ button{
     border: black solid 0.1em;
     outline-offset: 0.188em black;
     opacity: 50%;
-  }
-  
-  .yellowCircle:active,
-  .orangeCircle:active,
-  .redCircle:active {
+}
+
+.yellowCircle:active,
+.orangeCircle:active,
+.redCircle:active {
     height: 3em;
     width: 3em;
     border-radius: 50%;
@@ -383,18 +420,100 @@ button{
     border: black solid 0.1em;
     outline-offset: 0.188em black;
     opacity: 100%;
-  }
-  
-  .yellowCircle {
+}
+
+.yellowCircle {
     background-color: #ebff00;
-  }
-  
-  .orangeCircle {
+}
+
+.orangeCircle {
     background-color: #ff8a00;
-  }
-  
-  .redCircle {
+}
+
+.redCircle {
     background-color: #ff0000;
-  }
-  
-  
+}
+
+/* SPINNER ENDS */
+
+/* ACCOUNT */
+/* Body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Home button styles */
+.homeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Account container styles */
+.accountContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Profile section styles */
+.profileSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profileImageContainer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileName {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+/* Categories section styles */
+.categoriesSection {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap items onto multiple lines */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+.categoryBox {
+    width: calc(50% - 20px);
+    /* Each box occupies 50% of the container width with a margin of 20px */
+    margin: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .categoryBox {
+        width: calc(100% - 20px);
+        /* Each box occupies 100% of the container width with a margin of 20px for smaller screens */
+    }
+}
+
+.categoryImage {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.categoryTitle {
+    margin-top: 10px;
+    font-size: 18px;
+}

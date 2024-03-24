@@ -15,6 +15,10 @@ def llm():
 def forYou():
     return render_template('forYou.html')
 
+@app.route('/account')
+def account():
+    return render_template('account.html')
+
 @app.route('/get_response', methods=['GET','POST'])  # Allow GET requests
 def get_response():
     user_input = request.json['prompt']

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Home button -->
+  <a href="{{ url_for('home')}}" class="homeButton">Home</a>
+
+  <div class="accountContainer">
+
+    <!-- Profile section -->
+    <div class="profileSection">
+      <div class="profileImageContainer">
+        <img src="../static/image_4.jpeg" alt="Profile Image" class="profileImage">
+      </div>
+      <div class="profileName">John Doe</div>
+    </div>
+
+    <!-- Categories section -->
+    <div class="categoriesSection">
+      <div class="categoryBox">
+        <img src="../static/image_6.jpeg" alt="Brands" class="categoryImage">
+        <div class="categoryTitle">Brands
+            <p>Zara, H&M, Versace</p>
+        </div>
+      </div>
+      <div class="categoryBox">
+        <img src="../static/image_6.jpeg" alt="Accessories" class="categoryImage">
+        <div class="categoryTitle">Accessories
+            <p>Purses, platform shoes, chunky boots</p>
+        </div>
+      </div>
+      <div class="categoryBox">
+        <img src="../static/image_6.jpeg" alt="Styles" class="categoryImage">
+        <div class="categoryTitle">Styles
+            <p>Smart, Casual, Old Money </p>
+        </div>
+      </div>
+      <div class="categoryBox">
+        <img src="../static/image_6.jpeg" alt="Color Palette" class="categoryImage">
+        <div class="categoryTitle">Color Palette
+            <p>Cool Spring</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

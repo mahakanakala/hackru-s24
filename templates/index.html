@@ -9,6 +9,7 @@
 </head>
 
 <main class="main">
+    <div class="filter">
     <div class="grid-container">
         <div class="grid-item">
             <img src="../static/image_1.jpeg" alt="Image 1">
@@ -38,14 +39,15 @@
     <h1 class="title">FashionFinder</h1>
     <div class="header">
         <div class="llmBtnContainer">
-            <a href="{{ url_for('llm') }}" target="_self" rel="noopener noreferrer" class="loginBtn">StylelistAI</a>
+            <a href="{{ url_for('llm') }}" target="_self" rel="noopener noreferrer" class="llmBtn">StylelistAI</a>
         </div>
         <div class="forYouBtnContainer">
-            <a href="{{url_for('forYou')}}" target="_self" rel="noopener noreferrer" class="llmBtn">For You</a>
+            <a href="{{url_for('forYou')}}" target="_self" rel="noopener noreferrer" class="homeBtn">For You</a>
         </div>
         <div class="homeBtnContainer">
             <a href="{{ url_for('home') }}" target="_self" rel="noopener noreferrer" class="homeBtn">Home</a>
         </div>
+    </div>
     </div>
 </main>
 
