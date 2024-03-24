@@ -41,4 +41,4 @@ def get_response():
     return jsonify({'response_value': response_value})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="whats-in-your-lookbook", debug=True)
